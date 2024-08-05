@@ -1,6 +1,9 @@
 import React from "react";
 // import { LogoImage, AccountIcon } from "../assets";
-
+import Header from "../shared/header";
+import StepsInfo from "../pages/StepsInfo";
+import AppSection from "../pages/AppSection";
+import Footer from "../shared/footer";
 function Landing() {
   return (
     <div>

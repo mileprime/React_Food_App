@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ErrorBoundary from "./ErrorBoundary";
+import Home from "./pages/home";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landing from "./pages/landing";
@@ -18,7 +19,7 @@ function App() {
       <ErrorBoundary>
         <BrowserRouter>
           <Routes>
-            <Route index element={<Landing />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/home" element={<Home />} />
           </Routes>
         </BrowserRouter>
