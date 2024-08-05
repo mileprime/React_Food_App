@@ -1,11 +1,14 @@
 import React from "react";
 import { LogoImage, AccountIcon } from "../assets";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <div>
-        <img src={LogoImage} alt="logo" />
+        <Link to="./home">
+          <img src={LogoImage} alt="logo" />
+        </Link>
       </div>
 
       <div className="user-nav">

@@ -23,7 +23,6 @@ function App() {
             <Route path="/home" element={<Home />} />
           </Routes>
         </BrowserRouter>
-        <Landing />
       </ErrorBoundary>
     </UserContext.Provider>
   );
