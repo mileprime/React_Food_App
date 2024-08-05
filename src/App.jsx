@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import "./App.css";
-import Parent from "./Parent";
+import Landing from "./pages/landing";
 export const UserContext = React.createContext();
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <UserContext.Provider value={user}>
       <ErrorBoundary>
-        <Parent />
+        <Landing />
       </ErrorBoundary>
     </UserContext.Provider>
   );
