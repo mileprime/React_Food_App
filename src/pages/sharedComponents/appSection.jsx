@@ -1,4 +1,6 @@
 import React from "react";
+import "../styling/appSection.css";
+import { GoogleIcon, AppleIcon, DummyApp } from "../imagesAndIcons";
 
 function AppSection() {
   return (
@@ -10,11 +12,11 @@ function AppSection() {
         </div>
         <div className="btn-app-container">
           <button className="btn-app btn-app-dark">
-            <img src="./apple.png" />
+            <img src={AppleIcon} alt="Apple Icon" />
             <p>Apple Store</p>
           </button>
           <button className="btn-app">
-            <img src="./google.png" />
+            <img src={GoogleIcon} alt="Google Icon" />
             <p>Google Play</p>
           </button>
         </div>
@@ -23,9 +25,10 @@ function AppSection() {
       </div>
 
       <div className="image-container">
-        <img src="./app-image.png" alt="Mobile App Display" />
+        <img src={DummyApp} alt="Mobile App Display" />
       </div>
     </section>
   );
 }
+
 export default AppSection;

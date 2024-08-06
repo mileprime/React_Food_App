@@ -1,42 +1,24 @@
 import React from "react";
-// import { LogoImage, AccountIcon } from "../assets";
-import Header from "../shared/header";
-import StepsInfo from "../pages/StepsInfo";
-import AppSection from "../pages/AppSection";
-import Footer from "../shared/footer";
+import "./styling/landing.css";
+
+// import "./Landing.css";
+import Header from "./sharedComponents/header";
+import Hearo from "./hearo";
+import Center from "./center";
+import AppSection from "./sharedComponents/appSection";
+import Footer from "./sharedComponents/footer";
+import CopyRight from "./sharedComponents/copyRight";
+
 function Landing() {
   return (
-    <div>
+    <>
       <Header />
-      <section class="hearo">
-        {/* Text Section  */}
-        <div>
-          <span className="hearo-title">Are You Hungry?</span>
-          <p class="hearo-text">
-            Order Your Favorite Food From Restaurants and shops
-          </p>
-          <div className="search-container">
-            <input
-              className="search-input"
-              type="text"
-              placeholder="Enter Address"
-            />
-            <button className="main-btn">Search</button>
-          </div>
-        </div>
-        {/* Image Section */}
-        <div>
-          <img src="./woman.png" />
-        </div>
-      </section>
-      <section className="center">
-        <StepsInfo />
-      </section>
-
+      <Hearo />
+      <Center />
       <AppSection />
-
       <Footer />
-    </div>
+      <CopyRight />
+    </>
   );
 }
 

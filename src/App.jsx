@@ -1,30 +1,22 @@
-import React, { useState } from "react";
-import ErrorBoundary from "./ErrorBoundary";
-import Home from "./pages/home";
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landing from "./pages/landing";
+import ErrorBoundary from "./ErrorBoundary";
 export const UserContext = React.createContext();
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
 function App() {
-  let user = {
-    printlog: () => {
-      alert("hi");
-    },
-    name: "Ahmed",
-  };
-
   return (
-    <UserContext.Provider value={user}>
+    <>
       <ErrorBoundary>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route index element={<Landing />} />
             <Route path="/home" element={<Home />} />
           </Routes>
         </BrowserRouter>
       </ErrorBoundary>
-    </UserContext.Provider>
+    </>
   );
 }
 
