@@ -12,7 +12,7 @@ function HomeFilter() {
           <li className="filter-item">
             <div className="custom-checkbox">
               <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1"></label>
+              <label htmlFor="checkbox1"></label>
             </div>
             <div>
               <p className="filter-info">Special Offers</p>
@@ -23,7 +23,7 @@ function HomeFilter() {
           <li className="filter-item">
             <div className="custom-checkbox">
               <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2"></label>
+              <label htmlFor="checkbox2"></label>
             </div>
             <div>
               <p className="filter-info">Free Delivery</p>
@@ -34,7 +34,7 @@ function HomeFilter() {
           <li className="filter-item">
             <div className="custom-checkbox">
               <input type="checkbox" id="checkbox3" />
-              <label for="checkbox3"></label>
+              <label htmlFor="checkbox3"></label>
             </div>
             <div>
               <p className="filter-info">Top Sellers</p>
@@ -45,7 +45,7 @@ function HomeFilter() {
           <li className="filter-item">
             <div className="custom-checkbox">
               <input type="checkbox" id="checkbox4" />
-              <label for="checkbox4"></label>
+              <label htmlFor="checkbox4"></label>
             </div>
             <div>
               <p className="filter-info">Open Now</p>
@@ -56,7 +56,7 @@ function HomeFilter() {
           <li className="filter-item">
             <div className="custom-checkbox">
               <input type="checkbox" id="checkbox5" />
-              <label for="checkbox5"></label>
+              <label htmlFor="checkbox5"></label>
             </div>
             <div>
               <p className="filter-info">Pickup</p>
