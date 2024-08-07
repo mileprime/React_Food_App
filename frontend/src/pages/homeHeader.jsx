@@ -4,12 +4,13 @@ function HomeHeader({ setCategory }) {
   return (
     <header>
       <img src="./images/header-bg-1.png" />
-      <div class="dishs-container">
+      <div className="dishs-container">
         {/* dish-item */}
         {foodCatgoery.map((food) => (
           <div
+          key={food.id}
             onClick={() => setCategory(food.food_name)}
-            class={`food-dish ${food.class_name}`}
+            className={`food-dish ${food.class_name}`}
           >
             <img src={food.food_image} />
             <p>{food.food_name}</p>

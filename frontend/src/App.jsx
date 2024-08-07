@@ -4,6 +4,9 @@ import Landing from "./pages/landing";
 import ErrorBoundary from "./ErrorBoundary";
 export const UserContext = React.createContext();
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import Home from "./pages/home";
 function App() {
   return (

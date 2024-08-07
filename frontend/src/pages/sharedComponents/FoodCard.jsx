@@ -1,39 +1,40 @@
 import React from "react";
 
-function FoodCard({ data }) {
+function FoodCard({ data,setShow }) {
   return (
-    <div class="card">
-      <div class="food-card">
-        <div class="img-container">
+    <div className="card">
+      <div className="food-card">
+        <div className="img-container">
           <img
-            class="food-img"
+            className="food-img"
             src="./images/hot-sushi-bg.webp"
             alt="sushi card"
           />
-          <img
+          <div onClick={()=>setShow(true)}>+</div>
+          {/* <img
             class="heart-icon"
             src="./images/heart-icon.svg"
             alt="heart icon"
-          />
+          /> */}
         </div>
 
-        <div class="text-container">
-          <div class="restaurant-logo">
+        <div className="text-container">
+          <div className="restaurant-logo">
             <img src="./images/rest-img.webp" />
           </div>
 
-          <div class="card-info">
+          <div className="card-info">
             <div>
-              <p class="card-info-head">{data.name}</p>
-              <div class="review-text card-info-text">
+              <p className="card-info-head">{data.name}</p>
+              <div className="review-text card-info-text">
                 <img src="./images/fi-sr-star.svg" alt="star icon" />
-                <span class="rating-text">4.8</span>
+                <span className="rating-text">4.8</span>
                 <img src="./images/dot.svg" alt="dot icon" />
                 <p>1024 + reviews</p>
               </div>
               <p>Sushi, Sea food</p>
             </div>
-            <div class="delivery-text green-bg">Free Delivery</div>
+            <div className="delivery-text green-bg">Free Delivery</div>
           </div>
         </div>
       </div>

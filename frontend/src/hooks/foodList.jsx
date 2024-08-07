@@ -9,6 +9,7 @@ function useFoodList() {
       const data = await result.json();
       setData(data.data);
       setIsLoading(false);
+      console.log(data,"")
     } catch (error) {
       setIsLoading(false);
     }
