@@ -7,6 +7,7 @@ function Admin() {
     return (
         <div>
             <Header />
+            <div className="page-container">
             <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -37,6 +38,7 @@ function Admin() {
           </tr>
         </tbody>
       </table>
+      </div>
 
             <Footer />
         </div>
