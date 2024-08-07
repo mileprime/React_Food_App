@@ -14,6 +14,7 @@ function Home() {
   const { data, isLoading } = useFoodList();
   console.log(data, isLoading);
   const [category, setCategory] = useState("All");
+  console.log(data, isLoading, "dfghjk");
   const callOnRender = (id, phase, actualDuration, startTime) => {
     console.log(id, phase, actualDuration, startTime, "profile");
   };
