@@ -75,6 +75,7 @@ function Home() {
           </Button>
         </Modal.Footer>
       </Modal>
+      <Footer />
     </>
   );
 }

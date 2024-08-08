@@ -4,7 +4,7 @@ import Footer from "./sharedComponents/footer";
 import {useState} from "react";
 import {Modal, Button} from 'react-bootstrap';
 import "./login.css";
-import NewItem from "./newItem";
+import NewItem from "./newFoodModal";
 
 function Admin() {
     const [food, setFood] = useState([]);
