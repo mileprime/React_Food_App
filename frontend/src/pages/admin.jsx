@@ -54,7 +54,7 @@ function Admin() {
 
     return (
         <div>
-            <Header />
+            <Header  isAdmin={true}/>
             <div className="page-container">
                 <Button onClick={()=>setShow(true)}>New Item</Button>
                 <Modal show={show} onHide={

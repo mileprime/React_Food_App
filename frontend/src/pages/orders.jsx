@@ -3,10 +3,43 @@ import Header from "./sharedComponents/header";
 import Footer from "./sharedComponents/footer";
 import {useState, useEffect} from "react";
 import "./orders.css";
+import Select from "react-select";
+import { ToastContainer, toast } from "react-toastify";
 
 function OrdersList () {
     const [order, setOrder] = useState([]);
-    // const [show, setShow] = useState(false);
+    const [selectedId, setSelectedId] = useState(null);
+    const [selectedOption, setSelectedOption] = useState("");
+    const options = [
+        {value: "Delivered", label: "Delivered"},
+        {value: "Processing", label: "Processing"},
+        {value: "Out For Delivery", label: "Out For Delivery"}
+    ];
+   let handleChange = async (selectedOption) => {
+    let status = selectedOption.value;
+
+    await updateStatus( selectedId,status)
+    console.log(selectedOption,selectedId, "selected option");
+   }
+   let updateStatus = async (orderId, status)=>{
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    await fetch("http://localhost:4000/api/order/status", {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify({orderId: orderId, status: status}),
+    })
+    .then((res) => res.json())
+    .then((res) => {
+        //fetch orders aga
+        fetchOrderList()
+        //send toast msg
+        toast("Status updated successfully")
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+   }
 
     let fetchOrderList = async () => {
 
@@ -22,7 +55,7 @@ function OrdersList () {
 
     
 return <div>
-        <Header />
+        <Header isAdmin={true}/>
 
         <table class="table">
         <thead class="thead-dark">
@@ -34,6 +67,7 @@ return <div>
             <th scope="col">Items</th>
             <th scope="col">Payment</th>
             <th scope="col">Status</th>
+            <th scope="col">*</th>
           </tr>
         </thead>
         <tbody>
@@ -54,14 +88,16 @@ return <div>
                              {item.status}
                     </div>
                    </td>
+                   <td>
+                   <Select
+        value={selectedOption}
+        onChange={(e)=>{
+            updateStatus(item._id, e.value);
+        }}
+        options={options}
+      />
+                   </td>
 
-
-                  {/* <td>
-                    <GoTrash
-                    color="red"
-                    size={30}
-                    onClick={() => deleteFood(item._id)}
-                  /></td> */}
                 </tr>
             ))}
         
@@ -71,6 +107,8 @@ return <div>
 
 
         <Footer />
+        <ToastContainer/>
+        
     </div>;
 }
 export default OrdersList;

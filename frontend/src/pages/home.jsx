@@ -26,6 +26,7 @@ function Home() {
 
   return (
     <>
+    <Header />
       <Profiler id="home" onRender={callOnRender}>
         {/* {!isLoading && data.map((food) => <div>{food.name}</div>)} */}
         <HomeHeader setCategory={setCategory} />
@@ -50,7 +51,7 @@ function Home() {
           </section>
         </div>
 
-        <Header />
+        
         <AppSection />
         <Suspense fallback={() => <div>Loading the footer!!!</div>}>
           <LazyFooter />
