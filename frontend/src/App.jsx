@@ -6,6 +6,7 @@ export const UserContext = React.createContext();
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Admin from "./pages/admin";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import Home from "./pages/home";

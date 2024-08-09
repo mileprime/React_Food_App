@@ -5,7 +5,7 @@ import {Button} from 'react-bootstrap';
 
 
 
-function NewItem(){
+function NewItem({fetchFoodList,closeModal}){
     const [newName, setNewName] = useState("");
     const [newDescription, setNewDescription] = useState("");
     const [newPrice, setNewPrice] = useState("");
@@ -28,6 +28,10 @@ function NewItem(){
             });
 let data=await newFood.json()
            console.log(data)
+           if(data.success){
+            fetchFoodList()
+            closeModal()
+           }
 
         } catch (error) {
 
