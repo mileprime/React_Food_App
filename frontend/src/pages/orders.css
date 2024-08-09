@@ -1,0 +1,18 @@
+.green_tag {
+    background-color: #d9f2e3;
+    color: green;
+}
+
+.blue_tag{
+    color: rgb(18,11, 66);
+    background-color: rgb(211, 211, 252);
+}
+.tag_order {
+    padding: 10px;
+    width:max-content;
+    border-radius: 20px;
+}
+.orange_tag {
+    background-color: #f6eace;
+    color: rgb(169, 69, 19);
+}

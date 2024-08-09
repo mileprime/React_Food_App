@@ -8,6 +8,7 @@ import {GoTrash} from "react-icons/go";
 import "./login.css";
 import NewItem from "./newFoodModal";
 
+
 function Admin() {
     const [food, setFood] = useState([]);
     const [show, setShow] = useState(false);
